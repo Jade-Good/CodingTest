@@ -18,5 +18,11 @@
     <ClCompile Include="K번째수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="더 맵게.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="사전순 부분문자열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
