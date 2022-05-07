@@ -48,6 +48,7 @@
     <ClCompile Include="1003.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="3046.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -70,6 +71,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2750.cpp">
+=======
+    <ClCompile Include="1010.cpp">
+>>>>>>> 4d93513366c74cd39808899626890c8d204b7032
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
