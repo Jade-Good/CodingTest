@@ -1,2 +1,0 @@
-D:\github\CodingTest\BOJ\x64\Debug\BOJ.exe
-C:\Users\kangs\GitHub\GitHub\CodingTest\BOJ\x64\Debug\BOJ.exe

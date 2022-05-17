@@ -27,15 +27,16 @@
 using namespace std;
 
 int main(void) {
-	int A, B = -1;
+	int A, B = 0, count, temp = 0, ac, len;
 	string s;
 	
 	cin >> s;
 	
-	for (int i = 1, j, count, temp = -1, ac, len; i <= 3; i++)
+	for (int i = 1, j; i <= 3; i++)	// 자릿수 증가 1~3 반복문
 	{
 		A = stoi(s.substr(0,i));
-		for (j = i, count = 1; j < s.size(); j+=len, count++)
+		count = 1;
+		for (j = i; j < s.size(); j+=len, count++)	// 숫자가 순서대로인지 검사
 		{
 			ac = A + count;
 			len = to_string(ac).size();
@@ -43,7 +44,7 @@ int main(void) {
 			if (ac != temp)
 				break;
 		}
-		if (j == s.size()) {
+		if (j == s.size()) {	// 마지막까지 검사했으면 B를 저장
 			B = temp;
 			break;
 		}
