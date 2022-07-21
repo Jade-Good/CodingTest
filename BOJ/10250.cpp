@@ -1,5 +1,5 @@
 /*
-[직각삼각형]
+[ACM 호텔]
 문제)
 	ACM 호텔 매니저 지우는 손님이 도착하는 대로 빈 방을 배정하고 있다. 
 	고객 설문조사에 따르면 손님들은 호텔 정문으로부터 걸어서 가장 짧은 거리에 있는 방을 선호한다고 한다.
@@ -42,9 +42,8 @@ int main(void) {
 
 	for (int i = 0; i < T; i++)	{
 		cin >> H >> W >> N;
-		if (N == 1) N = 2;
-		printf("%d%02d\n", N % H, N / H + 1);
+		if (N%H == 0) printf("%d%02d\n", H, N / H);
+		else printf("%d%02d\n", N % H, N / H + 1);
 	}
-
 	return 0;
 }
