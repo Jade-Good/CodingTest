@@ -15,6 +15,4 @@ for i in range(N):
     n = list(map(int,input().strip().split()))
     flower_bed.append(n)
 
-for 
-
 print(flower_bed)
