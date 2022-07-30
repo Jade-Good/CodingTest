@@ -39,5 +39,14 @@ public class Start {
 //        int sizes[][] = {{10,7}, {12,3},{8,15},{14,7},{5,15}};
 //        int sizes[][] = {{14,4}, {19,6},{6,16},{18,7},{7,11}};
 //        System.out.println(s.solution(sizes));
+
+//        나머지가_1이_되는_수_찾기 n = new 나머지가_1이_되는_수_찾기();
+//        System.out.println(n.solution(12));
+
+//        부족한_금액_계산하기 pmc = new 부족한_금액_계산하기();
+//        System.out.println(pmc.solution(3,20,4));
+
+        하샤드_수 x = new 하샤드_수();
+        System.out.println(x.solution(11));
     }
 }
