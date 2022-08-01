@@ -46,7 +46,50 @@ public class Start {
 //        부족한_금액_계산하기 pmc = new 부족한_금액_계산하기();
 //        System.out.println(pmc.solution(3,20,4));
 
-        하샤드_수 x = new 하샤드_수();
-        System.out.println(x.solution(11));
+//        하샤드_수 x = new 하샤드_수();
+//        System.out.println(x.solution(11));
+
+//        평균_구하기 a = new 평균_구하기();
+//        int arr[] = {1,2,3,4};
+//        System.out.println(a.solution(arr));
+
+//        콜라츠_추측 n = new 콜라츠_추측();
+//        System.out.println(n.solution(626331));
+
+//        최대공약수와_최소공배수 lcd = new 최대공약수와_최소공배수();
+//        for(int i : lcd.solution(2,5))
+//            System.out.println(i);
+
+//        짝수와_홀수 n = new 짝수와_홀수();
+//        System.out.println(n.solution(3));
+
+//        제일_작은_수_제거하기 i = new 제일_작은_수_제거하기();
+//        int arr[] = {4,3,2,1};
+//        for(int s : i.solution(arr))
+//            System.out.println(s);
+
+//        정수_제곱근_판별 rq = new 정수_제곱근_판별();
+//        System.out.println(rq.solution(121));
+
+        정수_내림차순으로_배치하기 n = new 정수_내림차순으로_배치하기();
+        System.out.println(n.solution(118372));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
