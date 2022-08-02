@@ -71,14 +71,18 @@ public class Start {
 //        정수_제곱근_판별 rq = new 정수_제곱근_판별();
 //        System.out.println(rq.solution(121));
 
-        정수_내림차순으로_배치하기 n = new 정수_내림차순으로_배치하기();
-        System.out.println(n.solution(118372));
+//        정수_내림차순으로_배치하기 n = new 정수_내림차순으로_배치하기();
+//        System.out.println(n.solution(118372));
 
+//        자연수_뒤집어_배열로_만들기 n = new 자연수_뒤집어_배열로_만들기();
+//        for(int i : n.solution(12345))
+//            System.out.println(i);
 
+//        자릿수_더하기 n = new 자릿수_더하기();
+//        System.out.println(n.solution(123));
 
-
-
-
+        이상한_문자_만들기 str = new 이상한_문자_만들기();
+        System.out.println(str.solution("try hello world"));
 
 
 
