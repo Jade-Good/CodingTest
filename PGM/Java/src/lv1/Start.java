@@ -81,8 +81,32 @@ public class Start {
 //        자릿수_더하기 n = new 자릿수_더하기();
 //        System.out.println(n.solution(123));
 
-        이상한_문자_만들기 str = new 이상한_문자_만들기();
-        System.out.println(str.solution("try hello world"));
+//        이상한_문자_만들기 str = new 이상한_문자_만들기();
+//        System.out.println(str.solution("try hello world"));
+
+//        약수의_합 n = new 약수의_합();
+//        System.out.println(n.solution(12));
+
+//        시저_암호 s = new 시저_암호();
+//        System.out.println(s.solution("AB", 1));
+
+//        문자열을_정수로_바꾸기 s = new 문자열을_정수로_바꾸기();
+//        System.out.println(s.solution("1234"));
+
+//        수박수박수박수박수박수 s = new 수박수박수박수박수박수();
+//        System.out.println(s.solution(3));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
