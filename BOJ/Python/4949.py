@@ -22,4 +22,3 @@ while(True):
     else:
         if len(stack) != 0: print("no")
         else: print("yes")
-
