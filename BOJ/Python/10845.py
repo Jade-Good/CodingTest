@@ -24,7 +24,7 @@ for i in range(N):
         print(str(int(len(q) == 0)) + "\n")
     elif order == "front":
         if len(q) == 0:
-            print("\n")
+            print("-1\n")
         else:
             print(str(q[0]) + "\n")
     elif order == "back":
