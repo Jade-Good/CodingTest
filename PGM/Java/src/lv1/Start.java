@@ -96,6 +96,9 @@ public class Start {
 //        수박수박수박수박수박수 s = new 수박수박수박수박수박수();
 //        System.out.println(s.solution(3));
 
+        폰켓몬 n = new 폰켓몬();
+        int nums[] = {3,3,3,2,2,2};
+        System.out.println(n.solution(nums));
 
 
 
