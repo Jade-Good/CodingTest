@@ -100,10 +100,13 @@ public class Start {
 //        int nums[] = {3,3,3,2,2,2};
 //        System.out.println(n.solution(nums));
 
-        약수의_개수와_덧셈 lr = new 약수의_개수와_덧셈();
-        System.out.println(lr.solution(24,27));
+//        약수의_개수와_덧셈 lr = new 약수의_개수와_덧셈();
+//        System.out.println(lr.solution(24,27));
 
-
+        성격_유형_검사하기 sc = new 성격_유형_검사하기();
+        String surver[] = {"AN", "CF", "MJ", "RT", "NA"};
+        int choicess[] = {5, 3, 2, 7, 5};
+        System.out.println(sc.solution(surver, choicess));
 
 
 
