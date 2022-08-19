@@ -1,8 +1,5 @@
-from itertools import count
-from sqlite3 import Cursor
 import sys
 from collections import Counter
-from threading import currentThread
 
 input = sys.stdin.readline
 print = sys.stdout.write
@@ -23,4 +20,3 @@ if len(cnt) > 1 and cnt[0][1] == cnt[1][1]:
 else:
     print(str(cnt[0][0]) + "\n")
 print(str(arr[-1] - arr[0]) + "\n")
-
