@@ -4,9 +4,23 @@ n, m, b = map(int, sys.stdin.readline().split())
 arr = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 
 answer = sys.maxsize
-print(answer)
+index = 0
 
+for floor in range(257):
+    up, down = 0, 0
 
+    for i in range(n):
+        for j in range(m):
+            if arr[i][j] >= floor:
+                up += arr[i][j] - floor
+            else:
+                down += floor - arr[i][j]
+    
+    if b + up >= down and down + (up * 2) <= answer:
+        answer = down + (up * 2)
+        index = floor
+
+print(answer, index)
 
 # import sys
 # input = sys.stdin.readline
