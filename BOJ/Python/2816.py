@@ -14,7 +14,7 @@ for i in range(kbs1):
 for i in range(kbs1):
     print(4,end="")
 if kbs1>kbs2:
-    for i in range(kbs2+1):
+    for i in range(kbs2+1): 
         print(1,end="")
     for i in range(kbs2):
         print(4,end="")
