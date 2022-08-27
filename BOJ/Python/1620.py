@@ -17,5 +17,3 @@ for i in range(m):
         sys.stdout.write(str(book[find]) + "\n")
     else:
         sys.stdout.write(book_reverse[int(find)] + "\n")
-
-
