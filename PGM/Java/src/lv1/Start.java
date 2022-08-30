@@ -117,10 +117,14 @@ public class Start {
 //                문자열_내림차순으로_배치하기 ss = new 문자열_내림차순으로_배치하기();
 //                System.out.println(ss.solution("Zbcdefg"));
 
-                문자열_내_p와_y의_개수 s = new 문자열_내_p와_y의_개수();
-                System.out.println(s.solution("Pyy"));
+//                문자열_내_p와_y의_개수 s = new 문자열_내_p와_y의_개수();
+//                System.out.println(s.solution("Pyy"));
 
-
+                문자열_내_마음대로_정렬하기 sn = new 문자열_내_마음대로_정렬하기();
+                String strings[] = {"sun", "bed", "car"};
+                for (String s : sn.solution(strings, 1)) {
+                        System.out.println(s);
+                }
 
 
 
