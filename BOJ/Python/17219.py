@@ -1,7 +1,6 @@
 import sys
 
 n, m = map(int, sys.stdin.readline().rstrip().split())
-
 passwd = dict()
 
 for _ in range(n):
