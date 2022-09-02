@@ -20,5 +20,3 @@ for i in range(3, n):
     dp[i] = max(dp[i-2]+arr[i], dp[i-3]+arr[i-1]+arr[i])
 
 print(dp[n-1])
-print(arr)
-print(dp)
