@@ -120,12 +120,14 @@ public class Start {
 //                문자열_내_p와_y의_개수 s = new 문자열_내_p와_y의_개수();
 //                System.out.println(s.solution("Pyy"));
 
-                문자열_내_마음대로_정렬하기 sn = new 문자열_내_마음대로_정렬하기();
-                String strings[] = {"sun", "bed", "car"};
-                for (String s : sn.solution(strings, 1)) {
-                        System.out.println(s);
-                }
+//                문자열_내_마음대로_정렬하기 sn = new 문자열_내_마음대로_정렬하기();
+//                String strings[] = {"sun", "bed", "car"};
+//                for (String s : sn.solution(strings, 1)) {
+//                        System.out.println(s);
+//                }
 
+                두_정수_사이의_합 ab = new 두_정수_사이의_합();
+                System.out.println(ab.solution(3,5));
 
 
 
