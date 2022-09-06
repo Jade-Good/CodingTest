@@ -126,10 +126,13 @@ public class Start {
 //                        System.out.println(s);
 //                }
 
-                두_정수_사이의_합 ab = new 두_정수_사이의_합();
-                System.out.println(ab.solution(3,5));
+//                두_정수_사이의_합 ab = new 두_정수_사이의_합();
+//                System.out.println(ab.solution(3,5));
 
-
+                나누어_떨어지는_숫자_배열 arr = new 나누어_떨어지는_숫자_배열();
+                int a[] = {5,9,7,10};
+                for (int i : arr.solution(a,5))
+                        System.out.println(i);
 
 
 
