@@ -129,16 +129,18 @@ public class Start {
 //                두_정수_사이의_합 ab = new 두_정수_사이의_합();
 //                System.out.println(ab.solution(3,5));
 
-                나누어_떨어지는_숫자_배열 arr = new 나누어_떨어지는_숫자_배열();
-                int a[] = {5,9,7,10};
-                for (int i : arr.solution(a,5))
-                        System.out.println(i);
+//                나누어_떨어지는_숫자_배열 arr = new 나누어_떨어지는_숫자_배열();
+//                int a[] = {5,9,7,10};
+//                for (int i : arr.solution(a,5))
+//                        System.out.println(i);
 
+//                음양_더하기 ab = new 음양_더하기();
+//                int absolutes[] = {4,7,12};
+//                boolean signs[] = {true,false,true};
+//                System.out.println(ab.solution(absolutes, signs));
 
-
-
-
-
+                가운데_글자_가져오기 s = new 가운데_글자_가져오기();
+                System.out.println(s.solution("qwert"));
 
 
         }
