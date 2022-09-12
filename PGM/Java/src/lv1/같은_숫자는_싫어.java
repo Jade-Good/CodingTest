@@ -1,15 +1,19 @@
 package lv1;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class 같은_숫자는_싫어 {
     public int[] solution(int []arr) {
-        Integer[] conv = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-        Set<Integer> set = new HashSet<Integer>(Arrays.asList(conv));
-        Integer[] a = set.toArray(new Integer[0]);
+        ArrayList<Integer> numbers = new ArrayList<>();
 
-        return Arrays.stream(conv).mapToInt(Integer::intValue).toArray();
+        numbers.add(arr[0]);
+
+         for(int i : arr) {
+             if(numbers.get(numbers.size()-1) != i) {
+                 numbers.add(i);
+             }
+         }
+
+         return numbers.stream().mapToInt(i -> i).toArray();
     }
 }

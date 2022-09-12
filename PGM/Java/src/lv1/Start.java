@@ -147,12 +147,15 @@ public class Start {
 //                int b[] = {-3,-1,0,2};
 //                System.out.println(ab.solution(a,b));
 
-                같은_숫자는_싫어 a = new 같은_숫자는_싫어();
-                int arr[] = {1,1,3,3,0,1,1};
-                for (int i :
-                        a.solution(arr)) {
-                        System.out.print(i + " ");
-                }
+//                같은_숫자는_싫어 a = new 같은_숫자는_싫어();
+//                int arr[] = {1,1,3,3,0,1,1};
+//                for (int i :
+//                        a.solution(arr)) {
+//                        System.out.print(i + " ");
+//                }
+
+                _3진법_뒤집기 thr = new _3진법_뒤집기();
+                System.out.println(thr.solution(45));
 
 
 
