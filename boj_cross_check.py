@@ -3,6 +3,8 @@
 import sys
 import urllib.request
 from bs4 import BeautifulSoup
+import time
+import random
 
 def find_problem(find_id):
     # 너무 많이 접속하면 차단되므로 이상한 접속이 아님을 헤더로 밝힘
@@ -11,8 +13,17 @@ def find_problem(find_id):
     # 백준 유저 페이지(맨 뒤에 아이디 추가)
     url = "https://www.acmicpc.net/user/"
 
+    size = len(find_id)
+    count = 1
+
     for i in find_id:
-        print("find : ", i)
+        # 접속 부하 방지로 사이트 차단 방지를 위해 사용자 클릭 처럼 랜덤 sleep
+        rand_value = random.randint(1, 3)
+        time.sleep(rand_value)
+
+        print(f"[{count}/{size}] find : {i}")
+        count += 1
+
         req = urllib.request.Request(url =(url+i), headers=header)  # 리퀘스트 생성
         url_open = urllib.request.urlopen(req)                      # url 접속
         bs_obj = BeautifulSoup(url_open, "html.parser")             # html 파싱
