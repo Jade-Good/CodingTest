@@ -1,10 +1,10 @@
 n = int(input())
-arr = list(input())[:-1]
+arr = list(input())
 answer = 0
 
 nextL = False
 left = True # 왼쪽 컵홀더 사용이 되는가
-for i in arr:
+for i in arr[:-1]:
     if i == 'S': # 일반 좌석
         answer += 1
     elif not nextL:   # 커플 좌석 왼쪽
@@ -15,5 +15,4 @@ for i in arr:
         nextL = False
         answer += 1
         left = False
-    print(i, answer)
 print(answer + 1)
