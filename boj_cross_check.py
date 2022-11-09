@@ -17,9 +17,9 @@ def find_problem(find_id):
     count = 1
 
     for i in find_id:
-        # 접속 부하 방지로 사이트 차단 방지를 위해 사용자 클릭 처럼 랜덤 sleep
-        rand_value = random.randint(1, 3)
-        time.sleep(rand_value)
+        # # 접속 부하 방지로 사이트 차단 방지를 위해 사용자 클릭 처럼 랜덤 sleep
+        # rand_value = random.randint(1, 3)
+        # time.sleep(rand_value)
 
         print(f"[{count}/{size}] find : {i}")
         count += 1
@@ -34,7 +34,7 @@ def find_problem(find_id):
 
 
 # 푼 문제를 찾을 아이디
-find_id = ['yoon6763', 'kangsm423', 'iomanip0107', 'apircity', 'spalqj56', 'iamdek', 'digh0515']
+find_id = ['kangsm423','wndnjs1839','yoon6763','iomanip0107','jcw1031','iamdek','digh0515','spalqj56','apircity','ckwnsgur0702','chch_xili']
 # find_id = []
 
 print("==================================\n\n\t백준 문제 크로스체크 프로그램\n\n==================================\n")
