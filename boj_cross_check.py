@@ -34,8 +34,8 @@ def find_problem(find_id):
 
 
 # 푼 문제를 찾을 아이디
-find_id = ['kangsm423','wndnjs1839','yoon6763','iomanip0107','jcw1031','iamdek','digh0515','spalqj56','apircity','ckwnsgur0702','chch_xili']
-# find_id = []
+# find_id = ['kangsm423','wndnjs1839','yoon6763','iomanip0107','jcw1031','iamdek','digh0515','spalqj56','apircity','ckwnsgur0702','chch_xili']
+find_id = []
 
 print("==================================\n\n\t백준 문제 크로스체크 프로그램\n\n==================================\n")
 problem = set()
