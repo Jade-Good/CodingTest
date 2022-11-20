@@ -31,21 +31,22 @@ public class boj_2535 {
         }
         System.out.println(sb.toString());
     }
-}
+    private static class Mydata implements Comparable<Mydata> {
+        int country;
+        int student;
+        int grade;
 
-class Mydata implements Comparable<Mydata> {
-    int country;
-    int student;
-    int grade;
+        public Mydata(int country, int student, int grade) {
+            this.country = country;
+            this.student = student;
+            this.grade = grade;
+        }
 
-    public Mydata(int country, int student, int grade) {
-        this.country = country;
-        this.student = student;
-        this.grade = grade;
+        @Override
+        public int compareTo(Mydata o) {
+            return o.grade - this.grade;
+        }
     }
 
-    @Override
-    public int compareTo(Mydata o) {
-        return o.grade - this.grade;
-    }
 }
+
