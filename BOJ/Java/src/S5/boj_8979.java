@@ -32,7 +32,7 @@ public class boj_8979 {
     }
     private static class MyData_8979 implements Comparable<MyData_8979> {
         int n, g, s, b;
-        public MyData_8979(int n, int g, int s, int b) {
+        private MyData_8979(int n, int g, int s, int b) {
             this.n = n;
             this.g = g;
             this.s = s;
