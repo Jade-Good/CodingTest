@@ -10,7 +10,15 @@ public class boj_1166 {
         int w = sc.nextInt();
         int h = sc.nextInt();
 
+        double start = 0, end = Math.max(l, Math.max(w,h));
 
-
+        for (int i = 0; i < 10000; i++) {
+            double mid = (start + end) / 2;
+            if ((long)(l/mid) * (long)(w/mid) * (long)(h/mid) >= n)
+                start = mid;
+            else
+                end = mid;
+        }
+        System.out.println(end);
     }
 }
