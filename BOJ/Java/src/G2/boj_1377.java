@@ -21,19 +21,19 @@ public class boj_1377 {
         }
         System.out.println(max + 1);
     }
-}
-class mData implements Comparable<mData> {
-    int value;
-    int index;
+    static class mData implements Comparable<mData> {
+        int value;
+        int index;
 
-    public mData(int value, int index) {
-        super();
-        this.value = value;
-        this.index = index;
-    }
+        public mData(int value, int index) {
+            super();
+            this.value = value;
+            this.index = index;
+        }
 
-    @Override
-    public int compareTo(mData o) {     // value 기준 오름차순 정렬하기
-        return this.value - o.value;
+        @Override
+        public int compareTo(mData o) {     // value 기준 오름차순 정렬하기
+            return this.value - o.value;
+        }
     }
 }
