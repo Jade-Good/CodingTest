@@ -62,7 +62,7 @@ while True:
 
                 # 텍스트 파일 읽어오기
                 print("\n 문제 리스트 파일 읽는 중...",end="")
-                f = open("D:\github\CodingTest\problem_list.txt",'r')
+                f = open("C:\Github\CodingTest\problem_list.txt",'r')
                 line_temp = []
 
                 lines = f.readlines()
