@@ -21,7 +21,7 @@ public class boj_2630 {
     }
 
     private static int cutting(int n, int x, int y) {
-//        print(n, x, y);
+        print(n, x, y);
         int pick = arr[x][y];
         if (n > 1) {
             for (int i = x; i < x + n; i++) {
