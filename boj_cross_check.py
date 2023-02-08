@@ -35,7 +35,7 @@ def find_problem(find_id):
 
 # 푼 문제를 찾을 아이디
 # find_id = ['kangsm423','wndnjs1839','yoon6763','iomanip0107','jcw1031','iamdek','digh0515','spalqj56','apircity','ckwnsgur0702','chch_xili']
-find_id = ['kangsm423', 'imin3672', 'adh1120', 'sylee']
+find_id = ['kangsm423', 'imin3672', 'adh1120', 'sylee', 'okip0428', 'daewha1021']
 
 print("==================================\n\n\t백준 문제 크로스체크 프로그램\n\n==================================\n")
 problem = set()
@@ -56,14 +56,13 @@ while True:
                 print("\n먼저 푼 문제 리스트를 불러와주세요.\n")
         else:
             order = input("\n>>  1) '문제 텍스트 파일' 크로스체크\t 2) '직접 입력' 크로스체크\n")
-            if order == '1':
+            if order == '1': 
                 level = ""
                 level_list = ['B', 'S'] # 브론즈, 실버만 구현
 
                 # 텍스트 파일 읽어오기
                 print("\n 문제 리스트 파일 읽는 중...",end="")
-                # f = open("C:\Github\CodingTest\problem_list.txt",'r')
-                f = open("D:\github\CodingTest\problem_list.txt",'r')
+                f = open("C:\Github\CodingTest\problem_list.txt",'r')
                 line_temp = []
 
                 lines = f.readlines()
