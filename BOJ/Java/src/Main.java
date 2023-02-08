@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import S3.boj_15650_recur;
+import S1.boj_1992;
 
 public class Main {
     static BufferedReader br;
@@ -11,9 +11,9 @@ public class Main {
     static String s;
     private static void doTest(String input) throws IOException {
         long start = System.nanoTime();
-        boj_15650_recur.test(input);
+        boj_1992.test(input);
         long end = System.nanoTime();
-        System.out.println("======\t\ttime : " + (end - start) / 1000 + "ms\t\t======");
+        System.out.println("\n======\t\ttime : " + (end - start) / 1000 + " micro seconds\t\t======");
     }
 
     private static void doInput(int problem_num) {
@@ -23,7 +23,7 @@ public class Main {
             sb = new StringBuilder();
             br = new BufferedReader(new InputStreamReader(System.in));
             while ((s = br.readLine()) != null) {
-//            public void test(String s) throws IOException{}
+//            public static void test(String s) throws IOException{}
                 ///////////////////////////////////////////////////////////////////////
                 if (s.equals("=")) {
                     doTest(sb.toString());
@@ -57,10 +57,10 @@ public class Main {
     public static void main(String[] args){
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
-        int problem_num = 15650;
+        int problem_num = 1992;
 
         doInput(problem_num);
 
-//        doOutput(problem_num);
+        doOutput(problem_num);
     }
 }
