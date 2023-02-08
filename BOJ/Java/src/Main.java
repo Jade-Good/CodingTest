@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import S1.boj_1992;
+import S1.boj_11660_2;
 
 public class Main {
     static BufferedReader br;
@@ -11,7 +11,7 @@ public class Main {
     static String s;
     private static void doTest(String input) throws IOException {
         long start = System.nanoTime();
-        boj_1992.test(input);
+        boj_11660_2.test(input);
         long end = System.nanoTime();
         System.out.println("\n======\t\ttime : " + (end - start) / 1000 + " micro seconds\t\t======");
     }
@@ -57,7 +57,7 @@ public class Main {
     public static void main(String[] args){
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
-        int problem_num = 1992;
+        int problem_num = 11660;
 
         doInput(problem_num);
 

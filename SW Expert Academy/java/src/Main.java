@@ -1,15 +1,16 @@
-import D2.SWEA_1859;
+import D3.SWEA_7236;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) {
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
 
-        int problem_num = 1859;
+        int problem_num = 7236;
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
@@ -20,9 +21,24 @@ public class Main {
         long start = System.nanoTime();
         ///////////////////////////////////////////////////////////////////////
 
-        //    public void test() throws IOException{}
+        /*
+
+        static public void test() throws IOException {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int T = Integer.parseInt(br.readLine());
+            int answer = 0;
+
+            for (int t = 1; t <= T; t++) {
+
+
+                System.out.println("#" + t + " " + answer);
+            }
+        }
+
+         */
+
         try {
-            SWEA_1859.test();
+            SWEA_7236.test();
         } catch (IOException e) {
             System.out.println(problem_num + "번 테스트 실패");
             e.printStackTrace();
