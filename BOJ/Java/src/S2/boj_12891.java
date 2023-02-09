@@ -18,19 +18,21 @@ public class boj_12891 {
         now = new int[4];
 
         // 체크 배열 입력 받기
-        st= new StringTokenizer(br.readLine());
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < 4; i++)
             arr[i] = Integer.parseInt(st.nextToken());
 
         // 현재 상태 배열과 초기화
-        for (int i = 0; i < p; i++){ now[idx(dna.charAt(i))]++; }
+        for (int i = 0; i < p; i++) {
+            now[idx(dna.charAt(i))]++;
+        }
 
-        int answer = check() ? 1:0;
+        int answer = check() ? 1 : 0;
 
         // 윈도우 이동
-        for (int i = 1; i <= s - p; i++){
-            now[idx(dna.charAt(i-1))]--;
-            now[idx(dna.charAt(i+p-1))]++;
+        for (int i = 1; i <= s - p; i++) {
+            now[idx(dna.charAt(i - 1))]--;
+            now[idx(dna.charAt(i + p - 1))]++;
             if (check())
                 answer++;
         }
@@ -38,26 +40,24 @@ public class boj_12891 {
     }
 
     // 문자의 DNA 인덱스 위치
-    private static int idx(char c){
+    private static int idx(char c) {
         if (c == 'A')
             return 0;
         else if (c == 'C') {
             return 1;
-        }
-        else if (c == 'G') {
+        } else if (c == 'G') {
             return 2;
-        }
-        else if (c == 'T') {
+        } else if (c == 'T') {
             return 3;
         }
         return 0;
     }
 
     // 체크 배열과 현재 상태 배열 비교
-    private static boolean check(){
+    private static boolean check() {
         boolean flag = true;
-        for (int i = 0; i < 4; i++){
-            if (now[i] < arr[i]){
+        for (int i = 0; i < 4; i++) {
+            if (now[i] < arr[i]) {
                 flag = false;
                 break;
             }

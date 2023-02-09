@@ -1,4 +1,4 @@
-import D3.SWEA_7236;
+import D0.SWEA_4012;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +10,7 @@ public class Main {
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
 
-        int problem_num = 7236;
+        int problem_num = 4012;
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
@@ -23,7 +23,7 @@ public class Main {
 
         /*
 
-        static public void test() throws IOException {
+        public static void test() throws IOException {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             int T = Integer.parseInt(br.readLine());
             int answer = 0;
@@ -34,11 +34,13 @@ public class Main {
                 System.out.println("#" + t + " " + answer);
             }
         }
+        public static void main(String[] args) throws IOException {
+        }
 
          */
 
         try {
-            SWEA_7236.test();
+            SWEA_4012.test();
         } catch (IOException e) {
             System.out.println(problem_num + "번 테스트 실패");
             e.printStackTrace();
