@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 
 public class SWEA_4012 {
     static int n, answer;
-    static int[] pick;
     static int[][] table;
     static boolean[] visit;
     static BufferedReader br;
@@ -19,7 +18,6 @@ public class SWEA_4012 {
 
         for (int t = 1; t <= T; t++) {
             n = Integer.parseInt(br.readLine());
-            pick = new int[n];
             table = new int[n][n];
             visit = new boolean[n];
 
@@ -31,32 +29,32 @@ public class SWEA_4012 {
             }
 
             answer = Integer.MAX_VALUE;
-
-            recursion(0);
+            recursion(0, 0);
 
             System.out.println("#" + t + " " + answer);
         }
     }
-    private static void recursion(int count) { // count : 고른 재료의 개수
-        if (count == 4) {
-            System.out.println(pick[0] + " " + pick[1] + " " +pick[2] + " " +pick[3]);
-            int result = Math.abs((table[pick[0]][pick[1]]+table[pick[1]][pick[0]]) - (table[pick[2]][pick[3]]+table[pick[3]][pick[2]]));
-            if (result < answer){
-//                System.out.println(result);
-                answer = result;
-            }
-        }
-        else {
+    private static void recursion(int start, int count) { // count : 고른 재료의 개수
+        if (count == n/2) {
+            int sum1 = 0, sum2 = 0;
             for (int i = 0; i < n; i++) {
-                if (!visit[i]) {
-                    visit[i] = true;
-                    pick[count] = i;
-                    recursion(count + 1);
-                    visit[i] = false;
+                for (int j = i+1; j < n; j++) {
+                    if (visit[i] && visit[j])
+                        sum1 += table[i][j] + table[j][i];
+                    else if (!visit[i] && !visit[j])
+                        sum2 += table[i][j] + table[j][i];
                 }
             }
+
+            if (Math.abs(sum1-sum2) < answer)
+                answer = Math.abs(sum1-sum2);
         }
-    }
-    public static void main(String[] args) throws IOException {
+        else {
+            for (int i = start; i < n; i++) {
+                visit[i] = true;
+                recursion(i+1, count + 1);
+                visit[i] = false;
+            }
+        }
     }
 }
