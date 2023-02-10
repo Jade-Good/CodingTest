@@ -4,14 +4,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-import D3.SWEA_6808;
+import D4.SWEA_1218;
 
 public class Main {
     public static void main(String[] args) {
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
 
-        int problem_num = 6808;
+        int problem_num = 1218;
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
@@ -39,7 +39,7 @@ public class Main {
          */
 
         try {
-            SWEA_6808.test();
+            SWEA_1218.test();
         } catch (IOException e) {
             System.out.println(problem_num + "번 테스트 실패");
             e.printStackTrace();
