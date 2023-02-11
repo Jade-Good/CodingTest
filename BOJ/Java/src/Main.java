@@ -3,17 +3,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import S2.boj_2961;
+import S1.boj_1074;
 
 public class Main {
-    static int problem_num = 2961; // <<<<<<<<<<<<< 수정하기
+    static int problem_num = 1074; // <<<<<<<<<<<<< 수정하기
     static BufferedReader br;
     static StringBuilder sb;
     static String s;
 
     private static void doTest(String input) throws IOException {
         long start = System.nanoTime();
-        boj_2961.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
+        boj_1074.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
 
         /* 템플릿
 
