@@ -3,17 +3,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import S1.boj_1074;
+import G5.boj_2493_2;
 
 public class Main {
-    static int problem_num = 1074; // <<<<<<<<<<<<< 수정하기
+    static int problem_num = 2493; // <<<<<<<<<<<<< 수정하기
     static BufferedReader br;
     static StringBuilder sb;
     static String s;
 
-    private static void doTest(String input) throws IOException {
+    private static void doTest(String input, int count) throws IOException {
         long start = System.nanoTime();
-        boj_1074.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
+        boj_2493_2.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
 
         /* 템플릿
 
@@ -29,7 +29,7 @@ public class Main {
          */
 
         long end = System.nanoTime();
-        System.out.println("\n======\t\ttime : " + (end - start) / 1000 + " micro seconds\t\t======");
+        System.out.println("======\t ("+count+") time : " + (end - start) / 1000 + " micro seconds\t======\n");
     }
 
     private static void doInput() {
@@ -38,14 +38,15 @@ public class Main {
 
             sb = new StringBuilder();
             br = new BufferedReader(new InputStreamReader(System.in));
+            int count = 1;
             while ((s = br.readLine()) != null) {
                 if (s.equals("=")) {
-                    doTest(sb.toString());
+                    doTest(sb.toString(), count++);
                     sb = new StringBuilder();
                 } else
                     sb.append(s + "\n");
             }
-            doTest(sb.toString());
+            doTest(sb.toString(), count);
         } catch (IOException e) {
             System.out.println("input 파일 읽기 실패");
             e.printStackTrace();
