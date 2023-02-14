@@ -3,17 +3,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import G5.boj_2493_2;
+import S1.boj_14888;
 
 public class Main {
-    static int problem_num = 2493; // <<<<<<<<<<<<< 수정하기
+    static int problem_num = 14888; // <<<<<<<<<<<<< 수정하기
     static BufferedReader br;
     static StringBuilder sb;
     static String s;
 
     private static void doTest(String input, int count) throws IOException {
         long start = System.nanoTime();
-        boj_2493_2.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
+        boj_14888.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
 
         /* 템플릿
 
@@ -21,15 +21,15 @@ public class Main {
             StringTokenizer st = new StringTokenizer(s);
 
         }
-        public static void main(String[] args) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        public static void main(String[] args) throws IOException{
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in) ) ;
 
         }
 
          */
 
         long end = System.nanoTime();
-        System.out.println("======\t ("+count+") time : " + (end - start) / 1000 + " micro seconds\t======\n");
+        System.out.println("======\t ("+count+") time : " + (end - start) / 1000 + " micro seconds\t======");
     }
 
     private static void doInput() {
