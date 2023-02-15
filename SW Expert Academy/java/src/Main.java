@@ -48,8 +48,11 @@ public class Main {
 
         ///////////////////////////////////////////////////////////////////////
         long end = System.nanoTime();
-        System.out.println("\n============================" + " time : " + (end - start) / 1000
-                + "ms ===========================");
+        int nano_seconds = (int)(end - start) / 1000;
+        int milli_seconds = nano_seconds / 1000;
+        int seconds = milli_seconds / 1000;
+        System.out.printf("======\t %ds %dms %dns \t======", seconds, milli_seconds, nano_seconds);
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/outputFiles/" + problem_num + ".txt"));

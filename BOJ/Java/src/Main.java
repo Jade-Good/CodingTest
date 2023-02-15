@@ -29,7 +29,10 @@ public class Main {
          */
 
         long end = System.nanoTime();
-        System.out.println("======\t ("+count+") time : " + (end - start) / 1000 + " micro seconds\t======");
+        int nano_seconds = (int)(end - start) / 1000;
+        int milli_seconds = nano_seconds / 1000;
+        int seconds = milli_seconds / 1000;
+        System.out.printf("======\t (%d) %ds %dms %dns \t======", count, seconds, milli_seconds, nano_seconds);
     }
 
     private static void doInput() {
