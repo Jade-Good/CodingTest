@@ -35,22 +35,37 @@ public class boj_15686 {
         open = new boolean[chicken.size()];
 
         // 본 계산 (부분 집합 + 완전탐색)
-        subset(0, 0);
+        //subset(0, 0);
+        comb(0,0);
 
         System.out.println(answer);
     }
 
-    private static void subset(int count, int open_count) { // 치킨집의 부분집합, count : 현재까지 처리한 원소 수
-        if (count == chicken.size()) {
-            if (open_count <= m)
-                city_chicken_distance();
-        } else {
-            open[count] = true;
-            subset(count + 1, open_count+1);
-            open[count] = false;
-            subset(count + 1, open_count);
+    private static void comb(int idx, int cnt) {
+        if (cnt == m) { // M개의 치킨집을 뽑았다. 거리를 계산하자.
+            int sum = 0;
+            city_chicken_distance();
+            return;
         }
+        if (idx == chicken.size()) return;
+
+        open[idx] = true;
+        comb(idx + 1, cnt + 1);
+        open[idx] = false;
+        comb(idx + 1, cnt);
     }
+
+//    private static void subset(int count, int open_count) { // 치킨집의 부분집합, count : 현재까지 처리한 원소 수
+//        if (count == chicken.size()) {
+//            if (open_count <= m)
+//                city_chicken_distance();
+//        } else {
+//            open[count] = true;
+//            subset(count + 1, open_count + 1);
+//            open[count] = false;
+//            subset(count + 1, open_count);
+//        }
+//    }
 
     private static void city_chicken_distance() {
         int sum = 0; //임시 도시의 치킨 거리
@@ -99,7 +114,8 @@ public class boj_15686 {
         open = new boolean[chicken.size()];
 
         // 본 계산 (부분 집합 + 완전탐색)
-        subset(0, 0);
+        //subset(0, 0);
+        comb(0,0);
 
         System.out.println(answer);
     }
