@@ -32,7 +32,7 @@ public class Main {
         int nano_seconds = (int)(end - start) / 1000;
         int milli_seconds = nano_seconds / 1000;
         int seconds = milli_seconds / 1000;
-        System.out.printf("======\t (%d) %ds %dms %dns \t======", count, seconds, milli_seconds, nano_seconds);
+        System.out.printf("======\t (%d) %ds %dms %dns \t======\n", count, seconds, milli_seconds, nano_seconds);
     }
 
     private static void doInput() {
