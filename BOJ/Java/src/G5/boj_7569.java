@@ -1,10 +1,10 @@
-package S2;
+package G5;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class boj_4963 {
+public class boj_7569 {
     public static void main(String[] args) {
         // input
         Scanner sc = new Scanner(System.in);
