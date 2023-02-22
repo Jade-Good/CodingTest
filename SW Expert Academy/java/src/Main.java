@@ -1,17 +1,16 @@
+import D3.SWEA_1873_상호의_배틀필드;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
-import D3.SWEA_1228;
 
 public class Main {
     public static void main(String[] args) {
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
 
-        int problem_num = 1228;
+        int problem_num = 1873;
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
@@ -24,7 +23,7 @@ public class Main {
 
         /*
 
-//        public static void main(String[] args) {
+//        public static void main(String[] args) throws IOException{
         public static void test() throws IOException {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             int T = Integer.parseInt(br.readLine());
@@ -40,7 +39,7 @@ public class Main {
          */
 
         try {
-            SWEA_1228.test();
+            SWEA_1873_상호의_배틀필드.test();
         } catch (IOException e) {
             System.out.println(problem_num + "번 테스트 실패");
             e.printStackTrace();
@@ -51,7 +50,7 @@ public class Main {
         int nano_seconds = (int)(end - start) / 1000;
         int milli_seconds = nano_seconds / 1000;
         int seconds = milli_seconds / 1000;
-        System.out.printf("======\t %ds %dms %dns \t======", seconds, milli_seconds, nano_seconds);
+        System.out.printf("======\t %ds %dms %dns \t======\n", seconds, milli_seconds, nano_seconds);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
