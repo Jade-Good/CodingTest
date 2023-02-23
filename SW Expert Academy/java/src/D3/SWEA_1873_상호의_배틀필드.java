@@ -111,6 +111,7 @@ public class SWEA_1873_상호의_배틀필드 {
                         D = k;
                         r = i;
                         c = j;
+                        map[i][j] = '.';
                         return;
                     }
                 }
@@ -119,6 +120,7 @@ public class SWEA_1873_상호의_배틀필드 {
     }
 
     private static void print() {
+        map[r][c] = dc[D];
         for (int i = 0; i < H; i++) {
             for (int j = 0; j < W; j++) {
                 sb.append(map[i][j]);
