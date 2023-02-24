@@ -1,19 +1,19 @@
+import G5.Boj_1068_트리;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import G5.Boj_15662_톱니바퀴2;
-
 public class Main {
-    static int problem_num = 15662; // <<<<<<<<<<<<< 수정하기
+    static int problem_num = 1068; // <<<<<<<<<<<<< 수정하기
     static BufferedReader br;
     static StringBuilder sb;
     static String s;
 
     private static void doTest(String input, int count) throws IOException {
         long start = System.nanoTime();
-        Boj_15662_톱니바퀴2.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
+        Boj_1068_트리.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
 
         /* 템플릿
 
