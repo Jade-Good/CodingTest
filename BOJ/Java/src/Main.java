@@ -1,4 +1,4 @@
-import G5.Boj_1068_트리;
+import G4.Boj_17144_미세먼지_안녕;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,14 +6,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    static int problem_num = 1068; // <<<<<<<<<<<<< 수정하기
+    static int problem_num = 17144; // <<<<<<<<<<<<< 수정하기
     static BufferedReader br;
     static StringBuilder sb;
     static String s;
 
     private static void doTest(String input, int count) throws IOException {
         long start = System.nanoTime();
-        Boj_1068_트리.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
+        Boj_17144_미세먼지_안녕.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
 
         /* 템플릿
 
