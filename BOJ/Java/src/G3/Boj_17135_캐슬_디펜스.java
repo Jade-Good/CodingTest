@@ -3,6 +3,8 @@ package G3;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Boj_17135_캐슬_디펜스 {
@@ -44,7 +46,7 @@ public class Boj_17135_캐슬_디펜스 {
                     map = deepCopy(origin); // 게임 판 초기화
 
                     while (!isDone()) { // 종료 확인
-                        //print();
+//                        print();
 
                         // 각 궁수의 타겟 찾기
                         Pair[] targets = find_Target(new int[]{i, j, k});
@@ -98,28 +100,33 @@ public class Boj_17135_캐슬_디펜스 {
         Pair[] targets = new Pair[3];
 
         for (int i = 0; i < archers.length; i++) {
-            targets[i] = find(-1, archers[i]);
+            targets[i] = bfs(N, archers[i]);
         }
 
         return targets;
     }
 
-    private static Pair find(int r, int c) { // 가장 가까운 적 찾기 (좌 우선)
-        for (int j = 0; j <= D; j++) {              // 열 확인
-            int temp = N - j - 1;
+    private static Pair bfs(int r, int c) { // 가장 가까운 적 찾기 (좌 우선)
+        int[] dx = {0, -1, 0}; // 좌 상 우
+        int[] dy = {-1, 0, 1};
 
-            if (map[temp][c]) return new Pair(temp, c); // 정면 보기
+        Queue<Pair> que = new ArrayDeque<>();
+        que.add(new Pair(r-1, c));
+        boolean[][] visited = new boolean[N][M];
 
-            for (int k = 1; k < c; k++) {      // 행 확인
+        while (!que.isEmpty()) {
+            Pair pair = que.poll();
+            if (map[pair.r][pair.c]) {
+                if (Math.abs(r - pair.r) + Math.abs(c - pair.c) <= D) return pair;
+                else return null;
+            }
 
-                int i = Math.abs(j - r) + Math.abs(c-k);  // 궁수와 거리
-
-                if (c-k >= 0 && map[temp][c-k] && i <= D) {               // 왼쪽 확인
-                    return new Pair(temp, k);
-                }
-
-                if (map[temp][M - k - 1] && i <= D) {       // 오른쪽 확인
-                    return new Pair(temp, M - k - 1);
+            for (int i = 0; i < dx.length; i++) {
+                int x = pair.r + dx[i];
+                int y = pair.c + dy[i];
+                if (0 <= x && x < N && 0 <= y && y < M && !visited[x][y]) {
+                    visited[x][y] = true;
+                    que.offer(new Pair(x,y));
                 }
             }
         }

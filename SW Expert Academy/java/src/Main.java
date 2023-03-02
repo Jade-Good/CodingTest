@@ -1,4 +1,4 @@
-import D4.SWEA_7465_창용_마을_무리의_개수;
+import D4.SWEA_1238_Contact;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Main {
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
 
-        int problem_num = 7465;
+        int problem_num = 1238;
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
@@ -39,7 +39,7 @@ public class Main {
          */
 
         try {
-            SWEA_7465_창용_마을_무리의_개수.test();
+            SWEA_1238_Contact.test();
         } catch (IOException e) {
             System.out.println(problem_num + "번 테스트 실패");
             e.printStackTrace();
