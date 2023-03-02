@@ -8,11 +8,12 @@ import java.util.StringTokenizer;
 
 public class SWEA_3124_최소_스패닝_트리 {
     private static int[] disjoint;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int tc = Integer.parseInt(br.readLine());
 
-        for (int t = 0; t < tc; t++) {
+        for (int t = 1; t <= tc; t++) {
             // Input
             StringTokenizer st = new StringTokenizer(br.readLine());
             int V = Integer.parseInt(st.nextToken());
@@ -20,26 +21,27 @@ public class SWEA_3124_최소_스패닝_트리 {
             PriorityQueue<Edge> pq = new PriorityQueue<>();
             for (int i = 0; i < E; i++) {
                 st = new StringTokenizer(br.readLine());
-                pq.add(new Edge(Integer.parseInt(st.nextToken()),Integer.parseInt(st.nextToken()),Integer.parseInt(st.nextToken())));
+                pq.add(new Edge(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
             }
 
             // MST
 
-            disjoint = new int[V+1];
+            disjoint = new int[V + 1];
             for (int i = 0; i <= V; i++) {
                 disjoint[i] = i;
             }
 
-            int cnt = 0, ans = 0;
+            int cnt = 0;
+            long ans = 0;
 
-            while (cnt != V-1 && !pq.isEmpty()) {
+            while (cnt != V - 1 && !pq.isEmpty()) {
                 Edge edge = pq.poll();
                 if (union(edge.num1, edge.num2)) {
                     cnt++;
                     ans += edge.weight;
                 }
             }
-            System.out.println(ans);
+            System.out.println("#" + t + " " + ans);
         }
     }
 
@@ -58,13 +60,19 @@ public class SWEA_3124_최소_스패닝_트리 {
         disjoint[p2] = p1;
         return true;
     }
-    private static class Edge {
+
+    private static class Edge implements Comparable<Edge> {
         int num1, num2, weight;
 
         public Edge(int num1, int num2, int weight) {
             this.num1 = num1;
             this.num2 = num2;
             this.weight = weight;
+        }
+
+        @Override
+        public int compareTo(Edge o) {
+            return this.weight - o.weight;
         }
     }
 }
