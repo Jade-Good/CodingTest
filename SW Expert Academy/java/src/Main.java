@@ -1,5 +1,3 @@
-import D0.SWEA_5656_벽돌_깨기;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,7 +13,7 @@ public class Main {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
             System.out.println("input 파일 읽기 실패");
-            e.printStackTrace();
+            e.printStackTr ace();
         }
 
         long start = System.nanoTime();
@@ -38,12 +36,12 @@ public class Main {
 
          */
 
-        try {
-            SWEA_5656_벽돌_깨기.test();
-        } catch (IOException e) {
-            System.out.println(problem_num + "번 테스트 실패");
-            e.printStackTrace();
-        }
+//        try {
+//            SWEA_5656_벽돌_깨기2.test();
+//        } catch (IOException e) {
+//            System.out.println(problem_num + "번 테스트 실패");
+//            e.printStackTrace();
+//        }
 
         ///////////////////////////////////////////////////////////////////////
         long end = System.nanoTime();
