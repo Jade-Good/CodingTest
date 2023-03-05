@@ -13,7 +13,7 @@ public class Main {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
             System.out.println("input 파일 읽기 실패");
-            e.printStackTr ace();
+            e.printStackTrace();
         }
 
         long start = System.nanoTime();
