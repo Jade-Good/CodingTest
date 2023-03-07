@@ -1,4 +1,4 @@
-import D0.SWEA_2115_벌꿀채취2;
+import D0.SWEA_5658_보물상자_비밀번호;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Main {
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
 
-        int problem_num = 2115;
+        int problem_num = 5658;
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
@@ -39,7 +39,7 @@ public class Main {
          */
 
         try {
-            SWEA_2115_벌꿀채취2.test();
+            SWEA_5658_보물상자_비밀번호.test();
         } catch (IOException e) {
             System.out.println(problem_num + "번 테스트 실패");
             e.printStackTrace();
