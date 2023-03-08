@@ -28,7 +28,7 @@ public class Boj_1916_최소비용_구하기 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         int M = Integer.parseInt(br.readLine());
-        boolean[] visited = new boolean[N-1];
+        boolean[] visited = new boolean[N+1];
         ArrayList<City>[] adjList = new ArrayList[N+1];
         for (int i = 0; i <= N; i++) {
             adjList[i] = new ArrayList<>();
@@ -45,14 +45,26 @@ public class Boj_1916_최소비용_구하기 {
         PriorityQueue<City> pq = new PriorityQueue<>();
         st = new StringTokenizer(br.readLine());
         pq.add(new City(Integer.parseInt(st.nextToken()),0));
+
+        int end = Integer.parseInt(st.nextToken());
         int cur;
-        long min;
+        long min = 0;
         while (!pq.isEmpty()){
+
             City city = pq.poll();
             cur = city.num;
             min = city.weight;
-            
-        }
 
+            if (cur == end) break;
+
+            visited[cur] = true;
+
+            for (City adjCity : adjList[cur]) {
+                if (!visited[adjCity.num]) {
+                    pq.add(new City(adjCity.num, min+ adjCity.weight));
+                }
+            }
+        }
+        System.out.println(min);
     }
 }
