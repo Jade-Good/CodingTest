@@ -3,8 +3,6 @@ package G5;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class Boj_5430_AC {
     public static void main(String[] args) throws IOException {
@@ -15,12 +13,12 @@ public class Boj_5430_AC {
         for (int t = 0; t < tc; t++) {
             String p = br.readLine();
             int n = Integer.parseInt(br.readLine());
-            String str = br.readLine();
-            String[] ss = str.substring(1, str.length() - 1).split(",");
+            String origin = br.readLine();
+            String[] ss = origin.substring(1, origin.length() - 1).split(",");
 
-            ArrayList<Integer> arr = new ArrayList<>();
+            int[] arr = new int[n];
             for (int i = 0; i < n; i++) {
-                arr.add(Integer.parseInt(ss[i]));
+                arr[i] = Integer.parseInt(ss[i]);
             }
 
             // 중복 R 제거
@@ -29,29 +27,49 @@ public class Boj_5430_AC {
             }
 
             // 연산 수행
-            process(p, arr);
+            process(n, p, arr);
         }
     }
 
-    private static void process(String p, ArrayList<Integer> arr) {
+    private static void process(int n, String p, int[] arr) {
+        int left = 0, right = n - 1;
+        boolean flag = true;
+
         for (int i = 0; i < p.length(); i++) {
+            // 뒤집기
             if (p.charAt(i) == 'R') {
-                Collections.reverse(arr);
-            } else {
-                if (arr.size() == 0) {
+                flag = !flag;
+            }
+            // 맨 앞 지우기
+            else {
+                if (n == 0) {
                     System.out.println("error");
                     return;
                 }
-                arr.remove(0);
+                n--;
+                if (flag) left++;
+                else right--;
             }
+        }
+
+        if (n==0) {
+            System.out.println("[]");
+            return;
         }
 
         StringBuilder sb = new StringBuilder();
         sb.append('[');
 
-        for (int i : arr) {
-            sb.append(i).append(',');
+        if (flag) {
+            for (int i = left; i <= right; i++) {
+                sb.append(arr[i]).append(',');
+            }
+        } else {
+            for (int i = right; i >= left; i--) {
+                sb.append(arr[i]).append(',');
+            }
         }
+
         sb.deleteCharAt(sb.length() - 1);
         sb.append(']');
         System.out.println(sb);
