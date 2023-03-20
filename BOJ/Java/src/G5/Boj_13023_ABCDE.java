@@ -8,8 +8,9 @@ import java.util.StringTokenizer;
 
 public class Boj_13023_ABCDE {
     private static int N, M;
+    private static boolean[] visit;
     private static ArrayList<Integer>[] adjList;
-    private static int[] depth;
+
     public static void main(String[] args) throws IOException {
         // Input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,6 +19,7 @@ public class Boj_13023_ABCDE {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
+        visit = new boolean[N];
         adjList = new ArrayList[N];
         for (int i = 0; i < N; i++) {
             adjList[i] = new ArrayList<>();
@@ -33,24 +35,25 @@ public class Boj_13023_ABCDE {
         System.out.println(isTrue());
     }
 
-    private static int isTrue(){
+    private static int isTrue() {
         for (int i = 0; i < N; i++) {
-            depth = new int[N];
-            if (depth[i] == 0) depth[i]++;
-            if (dfs(i) >= 5) return 1;
+            visit[i] = true;
+            if (dfs(1, i)) return 1;
+            visit[i] = false;
         }
         return 0;
     }
 
-    private static int dfs(int v) {
+    private static boolean dfs(int cnt, int num) {
+        if (cnt == 5) return true;
 
-        for (int i : adjList[v]) {
-            if (depth[i] == 0) {
-                depth[i] = 1;
-                depth[v] = Math.max(depth[v], dfs(i) + 1);
+        for (int i : adjList[num]) {
+            if (!visit[i]) {
+                visit[i] = true;
+                if(dfs(cnt + 1, i)) return true;
+                visit[i] = false;
             }
         }
-
-        return depth[v];
+        return false;
     }
 }
