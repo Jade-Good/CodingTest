@@ -15,55 +15,42 @@ public class Boj_7662_이중_우선순위_큐_2 {
         for (int t = 0; t < T; t++) {
             // Input
             int k = Integer.parseInt(br.readLine());
-            TreeMap<>
+            TreeMap<Integer, Integer> treeMap = new TreeMap<>();
 
+            int max, min;
             for (int i = 0; i < k; i++) {
                 st = new StringTokenizer(br.readLine());
                 char order = st.nextToken().charAt(0);
                 int num = Integer.parseInt(st.nextToken());
                 // Orders
                 if (order == 'I') { // Inque
-                    max_pq.add(num);
-                    min_pq.add(num);
-                    map.put(num, map.getOrDefault(num, 0) + 1);
+                    treeMap.put(num, treeMap.getOrDefault(num,0)+1);
                 } else {            // Deque
-                    if (num == 1) {     // max_pq deque
-                        deque(max_pq, map);
-                    } else {            // min_pq deque
-                        deque(min_pq, map);
+                    if (treeMap.isEmpty()) continue;
+                    if (num == 1) {     // max deque
+                        max = treeMap.lastEntry().getValue();
+                        if (max == 1) {
+                            treeMap.remove(treeMap.lastKey());
+                        } else {
+                            treeMap.put(treeMap.lastKey(), max-1);
+                        }
+                    } else {            // min deque
+                        min = treeMap.firstEntry().getValue();
+                        if (min == 1) {
+                            treeMap.remove(treeMap.firstKey());
+                        } else {
+                            treeMap.put(treeMap.firstKey(), min-1);
+                        }
                     }
                 }
             }
-            int max = Integer.MIN_VALUE;
-            int min = Integer.MAX_VALUE;
-            boolean flag = true;
 
-            for (int key : map.keySet()) {
-                int num = map.get(key);
-                if (num > 0) {
-                    flag = false;
-                    max = Math.max(max, key);
-                    min = Math.min(min, key);
-                }
-            }
-
-            if (flag) {
+            if (treeMap.isEmpty()) {
                 sb.append("EMPTY").append('\n');
             } else {
-                sb.append(max).append(' ').append(min).append('\n');
+                sb.append(treeMap.lastKey()).append(' ').append(treeMap.firstKey()).append('\n');
             }
         }
         System.out.print(sb);
-    }
-
-    private static void deque(Queue<Integer> queue, Map<Integer, Integer> map) {
-        while (!queue.isEmpty()) {
-            int num = queue.poll();
-
-            if (map.get(num) > 0) {
-                map.put(num, map.get(num) - 1);
-                break;
-            }
-        }
     }
 }
