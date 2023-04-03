@@ -75,7 +75,7 @@ public class boj_2714 {
                     answer += (char) ('A' + temp - 1);
                 }
             }
-            System.out.println(answer.stripTrailing());
+//            System.out.println(answer.stripTrailing());
         }
     }
 }
