@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Boj_13459_구슬_탈출 {
+public class Boj_13460_구슬_탈출2 {
     private static char[][] map;
     private static int[] dx = {-1, 0, 1, 0};
     private static int[] dy = {0, 1, 0, -1};
@@ -53,7 +53,7 @@ public class Boj_13459_구슬_탈출 {
                 for (int j = 0; j < 4; j++) {
                     int[] result = new int[4];      // 굴렸을때 공 위치
                     int ret = go(j, points, result);   // 공 굴려보기
-                    if (ret == 1) return 1;         // 정답 찾음
+                    if (ret == 1) return cnt;         // 정답 찾음
                     else if (ret == 0) {            // 진행은 가능
                         que.add(result);
                     }
@@ -61,7 +61,7 @@ public class Boj_13459_구슬_탈출 {
             }
             cnt++;
         }
-        return 0;
+        return -1;
     }
 
     private static int go(int d, int[] points, int[] result) {
