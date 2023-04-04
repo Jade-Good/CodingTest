@@ -8,7 +8,6 @@ import java.util.StringTokenizer;
 
 public class Boj_2458_키_순서 {
     private static int N, big, small;
-    private static int[] find;
     private static boolean[] visit;
     private static ArrayList<Integer>[][] edge;
 
@@ -17,7 +16,6 @@ public class Boj_2458_키_순서 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
-        find = new int[N + 1];
         edge = new ArrayList[2][N + 1];
         for (int i = 0; i < 2; i++) {
             for (int j = 1; j <= N; j++) {
@@ -51,7 +49,6 @@ public class Boj_2458_키_순서 {
 //                System.out.println("=========================");
 //                System.out.println(i + " " + big + " " + small);
                 ans++;
-                find[i] = big;
             }
         }
         System.out.print(ans);
@@ -59,38 +56,22 @@ public class Boj_2458_키_순서 {
 
     private static void dfs_big(int i) {
         visit[i] = true;
-        if (find[i] > 0) big += find[i];
-        else {
-            big++;
-            for (int next : edge[0][i]) {
-                if (!visit[next]) dfs_big(next);
+
+        big++;
+        for (int next : edge[0][i]) {
+            if (!visit[next]) {
+                dfs_big(next);
             }
         }
     }
 
     private static void dfs_small(int i) {
         visit[i] = true;
-        if (find[i] > 0) small += N - find[i] + 1;
-        else {
-            small++;
-            for (int next : edge[1][i]) {
-                if (!visit[next]) dfs_small(next);
+        small++;
+        for (int next : edge[1][i]) {
+            if (!visit[next]) {
+                dfs_small(next);
             }
         }
     }
 }
-
-/*
-
-9 8
-1 8
-9 8
-8 7
-7 6
-6 5
-5 4
-4 3
-3 2
-
-
- */

@@ -9,11 +9,10 @@ import java.util.StringTokenizer;
 
 public class Boj_9205_맥주_마시면서_걸어가기 {
     private static class Point {
-        int num, temp;
+        int num;
 
-        public Point(int num, int temp) {
+        public Point(int num) {
             this.num = num;
-            this.temp = temp;
         }
     }
 
@@ -34,7 +33,7 @@ public class Boj_9205_맥주_마시면서_걸어가기 {
 
             // BFS
             Queue<Point> que = new ArrayDeque<>();
-            que.add(new Point(0, 0));
+            que.add(new Point(0));
             visited[0] = true;
 
             boolean flag = false;
@@ -50,10 +49,9 @@ public class Boj_9205_맥주_마시면서_걸어가기 {
 
                 for (int i = 0; i < n + 2; i++) {
                     if (!visited[i]) { // 방문 안했는지 먼저 확인
-                        int len = point.temp; // 거리 초기 값 : 이전의 나머지 거리
-                        len += Math.abs(map[now][0] - map[i][0]) + Math.abs(map[now][1] - map[i][1]);
+                        int len = Math.abs(map[now][0] - map[i][0]) + Math.abs(map[now][1] - map[i][1]);
                         if (len <= 1000) {
-                            que.add(new Point(i, len % 50));
+                            que.add(new Point(i));
                             visited[i] = true;
                         }
                     }
