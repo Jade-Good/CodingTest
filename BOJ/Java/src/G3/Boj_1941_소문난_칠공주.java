@@ -37,7 +37,6 @@ public class Boj_1941_소문난_칠공주 {
 
     private static void comb(int now, int cnt, int dasom) {
 //        System.out.println(now + " " + cnt + " " + dasom);
-        if (now >= 25) return;
         if (cnt == 7) { // 7명 다 뽑았음
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) {
@@ -57,6 +56,7 @@ public class Boj_1941_소문난_칠공주 {
             }
             return;
         }
+        if (now >= 25) return;
 
         int r = now / 5;
         int c = now % 5;
