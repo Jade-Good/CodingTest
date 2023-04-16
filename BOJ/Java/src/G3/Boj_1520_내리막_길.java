@@ -6,56 +6,78 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Boj_1520_내리막_길 {
-    private static int N, M;
-    private static int[][] map, history;
-    private static boolean[][] visited;
-    private static int[] dx = {-1,0,1,0};
-    private static int[] dy = {0,1,0,-1};
+    private static long[] arr;
+    private static long[] tree;
+
+    private static long init(int start, int end, int node) { // start : 시작 인덱스, end : 끝 인덱스
+        if (start == end) {
+            return tree[node] = arr[start];
+        }
+        int mid = (start + end) / 2;
+        // 재귀적으로 두 부분으로 나눈 뒤, 그 합을 자기 자신으로
+        return tree[node] = init(start, mid, node * 2) + init(mid + 1, end, node * 2 + 1);
+    }
+
+    private static long sum(int start, int end, int node, int left, int right) {
+        // 범위 밖에 있는 경우
+        if (left > end || right < start) {
+            return 0;
+        }
+        // 범위 안에 있는 경우
+        if (left <= start && end <= right) {
+            return tree[node];
+        }
+        // 모두 아니면 두 부분으로 나누어 합을 구하기
+        int mid = (start + end) / 2;
+        return sum(start, mid, node * 2, left, right) + sum(mid + 1, end, node * 2 + 1, left, right);
+    }
+
+    private static void update(int start, int end, int node, int idx, long dif) {
+        // 범위 밖에 있는 경우
+        if (idx < start || idx > end) {
+            return;
+        }
+
+        // 범위 안에 있으면 내려가며 다른 원소도 갱신
+        tree[node] += dif;
+        if (start == end) {
+            return;
+        }
+        int mid = (start + end) / 2;
+        update(start, mid, node * 2, idx, dif);
+        update(mid + 1, end, node * 2 + 1, idx, dif);
+    }
 
     public static void main(String[] args) throws IOException {
-        // Input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
-        M = Integer.parseInt(st.nextToken());
-        map = new int[N][M];
-        history = new int[N][M];
-        visited = new boolean[N][M];
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int K = Integer.parseInt(st.nextToken());
+
+        arr = new long[N];
+        tree = new long[N * 4];
 
         for (int i = 0; i < N; i++) {
+            arr[i] = Long.parseLong(br.readLine());
+        }
+
+        init(0, N - 1, 1);
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < M + K; i++) {
+//            System.out.println(Arrays.toString(tree));
             st = new StringTokenizer(br.readLine());
-            for (int j = 0; j < M; j++) {
-                map[i][j] = Integer.parseInt(st.nextToken());
-                history[i][j] = -1;
+            if (Integer.parseInt(st.nextToken()) == 1) { // update
+                int b = Integer.parseInt(st.nextToken()) - 1;
+                long c = Long.parseLong(st.nextToken());
+                update(0, N - 1, 1, b, c - arr[b]);
+                arr[b] = c;
+            } else { // 구간 합 출력
+                sb.append(sum(0, N - 1, 1, Integer.parseInt(st.nextToken()) - 1, Integer.parseInt(st.nextToken()) - 1))
+                        .append('\n');
             }
         }
-
-        // DFS
-        dfs(0, 0);
-
-        // Output
-        System.out.print(history[0][0]);
-    }
-    private static int dfs(int r, int c) {
-        if (r == N-1 && c == M-1){
-            return 1;
-        }
-        if (history[r][c] >= 0) {
-            return history[r][c];
-        }
-        else {
-            visited[r][c] = true;
-            int tmp = 0;
-            for (int i = 0; i < 4; i++) {
-                int x = r + dx[i];
-                int y = c + dy[i];
-                if (0 <= x && x < N && 0 <= y && y < M && !visited[x][y] && map[r][c] > map[x][y]) {
-                    tmp += dfs(x, y);
-                }
-            }
-            visited[r][c] = false;
-            history[r][c] = tmp;
-            return tmp;
-        }
+        System.out.println(sb);
     }
 }
