@@ -16,7 +16,8 @@ public class Boj_5525_IOIOI {
         while(idx < S.length()-2) {
             if(S.substring(idx, idx+3).equals("IOI")) {
                 int tmp = 1;
-                while(S.substring())
+                idx += 3;
+//                while(S.substring())
             }
         }
 
