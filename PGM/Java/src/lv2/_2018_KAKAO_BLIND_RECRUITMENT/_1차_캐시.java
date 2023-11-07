@@ -6,34 +6,34 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-class Solution {
-	public int solution(int cacheSize, String[] cities) {
-		Queue<String> que = new ArrayDeque<>();
-
-		int answer = 0;
-
-		for (String city : cities) {
-
-			city = city.toLowerCase();
-
-			if (que.contains(city)) {
-				que.remove(city);
-				que.add(city);
-				answer += 1;
-			} else {
-				answer += 5;
-
-				que.add(city);
-				if (que.size() > cacheSize)
-					que.poll();
-			}
-		}
-
-		return answer;
-	}
-}
-
 public class _1차_캐시 {
+	private static class Solution {
+		public int solution(int cacheSize, String[] cities) {
+			Queue<String> que = new ArrayDeque<>();
+
+			int answer = 0;
+
+			for (String city : cities) {
+
+				city = city.toLowerCase();
+
+				if (que.contains(city)) {
+					que.remove(city);
+					que.add(city);
+					answer += 1;
+				} else {
+					answer += 5;
+
+					que.add(city);
+					if (que.size() > cacheSize)
+						que.poll();
+				}
+			}
+
+			return answer;
+		}
+	}
+
 	public static void main(String[] args) throws IOException {
 		Solution solution = new Solution();
 
