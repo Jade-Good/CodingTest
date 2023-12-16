@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Boj_10813_공_바꾸기 {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -16,7 +17,7 @@ public class Boj_10813_공_바꾸기 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        int[] arr = new int[N+1];
+        int[] arr = new int[N + 1];
 
         for (int i = 1; i <= N; i++) {
             arr[i] = i;

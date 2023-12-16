@@ -1,4 +1,4 @@
-import G4.Boj_17144_미세먼지_안녕;
+
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,16 +6,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    static int problem_num = 17144; // <<<<<<<<<<<<< 수정하기
+    static int problem_num = 17144; // <<<<<<<<<<<<< �����ϱ�
     static BufferedReader br;
     static StringBuilder sb;
     static String s;
 
     private static void doTest(String input, int count) throws IOException {
         long start = System.nanoTime();
-        Boj_17144_미세먼지_안녕.test(input); // <<<<<<<<<<<<<<<<<< 수정하기
+//        Boj_17144_�̼�����_�ȳ�.test(input); // <<<<<<<<<<<<<<<<<< �����ϱ�
 
-        /* 템플릿
+        /* ���ø�
 
         public static void test (String s) throws IOException {
             StringTokenizer st = new StringTokenizer(s);
@@ -29,7 +29,7 @@ public class Main {
          */
 
         long end = System.nanoTime();
-        int nano_seconds = (int)(end - start) / 1000;
+        int nano_seconds = (int) (end - start) / 1000;
         int milli_seconds = nano_seconds / 1000;
         int seconds = milli_seconds / 1000;
         System.out.printf("======\t (%d) %ds %dms %dns \t======\n", count, seconds, milli_seconds, nano_seconds);
@@ -46,12 +46,13 @@ public class Main {
                 if (s.equals("=")) {
                     doTest(sb.toString(), count++);
                     sb = new StringBuilder();
-                } else
+                } else {
                     sb.append(s + "\n");
+                }
             }
             doTest(sb.toString(), count);
         } catch (IOException e) {
-            System.out.println("input 파일 읽기 실패");
+            System.out.println("input ���� �б� ����");
             e.printStackTrace();
         }
     }
@@ -64,7 +65,7 @@ public class Main {
                 System.out.println(s);
             }
         } catch (IOException e) {
-            System.out.println("output 파일 읽기 실패");
+            System.out.println("output ���� �б� ����");
             e.printStackTrace();
         }
     }
