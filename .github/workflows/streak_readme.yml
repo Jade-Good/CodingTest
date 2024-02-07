@@ -1,0 +1,41 @@
+name: Edit README based on Commit Message
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  edit_readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Extract Commit Message
+        id: extract_commit_message
+        run: echo "::set-output name=message::$(git log --format=%B -n 1 ${{ github.sha }})"
+
+      - name: Parse Commit Message
+        id: parse_commit_message
+        run: echo "::set-output name=ct_number::$(echo ${{ steps.extract_commit_message.outputs.message }} | grep -oP 'CT_\K\d+')"
+
+      - name: Edit README
+        run: |
+          ct_number="${{ steps.parse_commit_message.outputs.ct_number }}"
+          if [ -n "$ct_number" ]; then
+            sed -i "1s/.*/# :rocket: 스트릭 [${ct_number}] 일/" README.md
+          fi
+
+      - name: Commit Changes
+        run: |
+          git config user.name 'GitHub Actions'
+          git config user.email '<>'
+          git add README.md
+          git commit -m "Update README based on commit message"
+          if [ -z "${GITHUB_ACTIONS}" ]; then
+              git push
+          else
+                echo "Skipping push to avoid recursive call."
+          fi
