@@ -34,8 +34,4 @@ jobs:
           git config user.email '<>'
           git add README.md
           git commit -m "Update README based on commit message"
-          if [ -z "${GITHUB_ACTIONS}" ]; then
-              git push
-          else
-                echo "Skipping push to avoid recursive call."
-          fi
+          git push
