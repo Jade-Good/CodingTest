@@ -1,0 +1,296 @@
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_1016_제곱이_아닌_.java"]("BOJ/Java/src/G1/Boj_1016_제곱이_아닌_.java")
+[Boj_1747_소수_팰린드롬.java"]("BOJ/Java/src/S1/Boj_1747_소수_팰린드롬.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_8545_시험과제.java"]("BOJ/Java/src/B5/Boj_8545_시험과제.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_24082_Cube.java](BOJ/Java/src/B5/Boj_24082_Cube.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_1456_거의_소수.java"]("BOJ/Java/src/G5/Boj_1456_거의_소수.java")
+[Boj_1929_소수_구하기.java"]("BOJ/Java/src/S3/Boj_1929_소수_구하기.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_24086_身長_Height.java"]("BOJ/Java/src/B5/Boj_24086_身長_Height.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_10189_Hook.java](BOJ/Java/src/B5/Boj_10189_Hook.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_21300_Bottle_Return.java](BOJ/Java/src/B5/Boj_21300_Bottle_Return.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_18096_Арифметическая_магия.java"]("BOJ/Java/src/B5/Boj_18096_Арифметическая_магия.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_11444_피보나치_수6.java"]("BOJ/Java/src/G2/Boj_11444_피보나치_수6.java")
+[Boj_1931_회의실_배정.java"]("BOJ/Java/src/S1/Boj_1931_회의실_배정.java")
+[Boj_1541_잃어버린_괄호2.java"]("BOJ/Java/src/S2/Boj_1541_잃어버린_괄호2.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_1715_카드_정렬하기.java"]("BOJ/Java/src/G4/Boj_1715_카드_정렬하기.java")
+[Boj_1744_수_묶기.java"]("BOJ/Java/src/G4/Boj_1744_수_묶기.java")
+[Boj_11047_동전0.java"]("BOJ/Java/src/S4/Boj_11047_동전0.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_8437_Julka.java](BOJ/Java/src/B5/Boj_8437_Julka.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_7891_Can_you_add_this.java](BOJ/Java/src/B5/Boj_7891_Can_you_add_this.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_20254_Site_Score.java](BOJ/Java/src/B5/Boj_20254_Site_Score.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_17256_달달함이_넘쳐흘러.java"]("BOJ/Java/src/B5/Boj_17256_달달함이_넘쳐흘러.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[streak_readme.yml](.github/workflows/streak_readme.yml)
+[README.md](README.md)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_20492.java](BOJ/Java/src/B5/Boj_20492.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_1300_K번째_수.java"]("BOJ/Java/src/G1/Boj_1300_K번째_수.java")
+[Boj_2343_기타_레슨.java"]("BOJ/Java/src/S1/Boj_2343_기타_레슨.java")
+[Boj_1920_수_찾기.java"]("BOJ/Java/src/S4/Boj_1920_수_찾기.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_18301_Rats.java](BOJ/Java/src/B5/Boj_18301_Rats.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_23234_The_World_Responds.java](BOJ/Java/src/B5/Boj_23234_The_World_Responds.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_24568_Cupcake_Party.java](BOJ/Java/src/B5/Boj_24568_Cupcake_Party.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_16170_오늘의_날짜는.java"]("BOJ/Java/src/B5/Boj_16170_오늘의_날짜는.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_13277_큰_수_곱셈.java"]("BOJ/Java/src/B5/Boj_13277_큰_수_곱셈.java")
+[Boj_26766_Serca.java](BOJ/Java/src/B5/Boj_26766_Serca.java)
+[Boj_30030_콘스위트콘_가격_구하기.java"]("BOJ/Java/src/B5/Boj_30030_콘스위트콘_가격_구하기.java")
+[Boj_8370_Plane.java](BOJ/Java/src/B5/Boj_8370_Plane.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_11404_플로이드.java"]("BOJ/Java/src/G4/Boj_11404_플로이드.java")
+[Boj_1167_트리의_지름.java"]("BOJ/Java/src/G5/Boj_1167_트리의_지름.java")
+[Boj_13023_ABCDE_2.java](BOJ/Java/src/G5/Boj_13023_ABCDE_2.java)
+[Boj_2023_신기한_소수.java"]("BOJ/Java/src/G5/Boj_2023_신기한_소수.java")
+[Boj_2178_미로_탐색.java"]("BOJ/Java/src/S1/Boj_2178_미로_탐색.java")
+[Boj_11724_연결_요소의_개수.java"]("BOJ/Java/src/S2/Boj_11724_연결_요소의_개수.java")
+[Boj_1260_DFS와_BFS_adjList.java"]("BOJ/Java/src/S2/Boj_1260_DFS와_BFS_adjList.java")
+[Boj_1260_DFS와_BFS_adjMatrix.java"]("BOJ/Java/src/S2/Boj_1260_DFS와_BFS_adjMatrix.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_8370_Plane.java](BOJ/Java/src/B5/Boj_8370_Plane.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_13277_큰_수_곱셈.java"]("BOJ/Java/src/B5/Boj_13277_큰_수_곱셈.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_30030_콘스위트콘_가격_구하기.java"]("BOJ/Java/src/B5/Boj_30030_콘스위트콘_가격_구하기.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_26766_Serca.java](BOJ/Java/src/B5/Boj_26766_Serca.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_10989_수_정렬하기_3.java"]("BOJ/Java/src/B3/Boj_10989_수_정렬하기_3.java")
+[Boj_10989_수_정렬하기_3_Queue.java"]("BOJ/Java/src/B3/Boj_10989_수_정렬하기_3_Queue.java")
+[Boj_1517_버블_소트.java"]("BOJ/Java/src/P5/Boj_1517_버블_소트.java")
+[Boj_2751_수_정렬하기_2.java"]("BOJ/Java/src/S5/Boj_2751_수_정렬하기_2.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_2638_치즈.java"]("BOJ/Java/src/G3/Boj_2638_치즈.java")
+[Boj_11399_ATM.java](BOJ/Java/src/S4/Boj_11399_ATM.java)
+[Boj_11004_K번째.java"]("BOJ/Java/src/S5/Boj_11004_K번째.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_26574_Copier.java](BOJ/Java/src/B5/Boj_26574_Copier.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_14928_큰_수.java"]("BOJ/Java/src/B5/Boj_14928_큰_수.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_15740_AB9.java](BOJ/Java/src/B5/Boj_15740_AB9.java)
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_2501_약수_구하기.java"]("BOJ/Java/src/B3/Boj_2501_약수_구하기.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_2225_합분해.java"]("BOJ/Java/src/G5/Boj_2225_합분해.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_14924_폰_노이만과_파리.java"]("BOJ/Java/src/B4/Boj_14924_폰_노이만과_파리.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_1377_버블_소트.java"]("BOJ/Java/src/G2/Boj_1377_버블_소트.java")
+[Boj_2467_용액.java"]("BOJ/Java/src/G5/Boj_2467_용액.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_14470_전자레인지.java"]("BOJ/Java/src/B4/Boj_14470_전자레인지.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_11283_한글2.java"]("BOJ/Java/src/B4/Boj_11283_한글2.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_2294_동전2.java"]("BOJ/Java/src/G5/Boj_2294_동전2.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_15726_이칙연산.java"]("BOJ/Java/src/B4/Boj_15726_이칙연산.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_17298_오큰수.java"]("BOJ/Java/src/G4/Boj_17298_오큰수.java")
+[Boj_1011_Fly_me_to_the_Alpha_Centauri.java](BOJ/Java/src/G5/Boj_1011_Fly_me_to_the_Alpha_Centauri.java)
+[Boj_11286_절댓값_힙.java"]("BOJ/Java/src/S1/Boj_11286_절댓값_힙.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_10986_나머지_합.java"]("BOJ/Java/src/G3/Boj_10986_나머지_합.java")
+[Boj_11729_하노이_탑_이동_순서.java"]("BOJ/Java/src/G5/Boj_11729_하노이_탑_이동_순서.java")
+[Boj_11003_최솟값_찾기.java"]("BOJ/Java/src/P5/Boj_11003_최솟값_찾기.java")
+[Boj_11660_구간_합_구하기5.java"]("BOJ/Java/src/S1/Boj_11660_구간_합_구하기5.java")
+[Boj_11659_구간_합_구하기4.java"]("BOJ/Java/src/S3/Boj_11659_구간_합_구하기4.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_1759_암호_만들기.java"]("BOJ/Java/src/G5/Boj_1759_암호_만들기.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_19944_뉴비의_기준은_뭘까.java"]("BOJ/Java/src/B4/Boj_19944_뉴비의_기준은_뭘까.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_2447_별찍기10.java"]("BOJ/Java/src/G5/Boj_2447_별찍기10.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_28691_정보보호학부_동아리_소개.java"]("BOJ/Java/src/B5/Boj_28691_정보보호학부_동아리_소개.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_28417_스케이트보드.java"]("BOJ/Java/src/B3/Boj_28417_스케이트보드.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_15873_공백_없는_AB.java"]("BOJ/Java/src/B4/Boj_15873_공백_없는_AB.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_2468_안전_영역.java"]("BOJ/Java/src/S1/Boj_2468_안전_영역.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_29751_삼각형.java"]("BOJ/Java/src/B5/Boj_29751_삼각형.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_17362_수학은_체육과목_입니다2.java"]("BOJ/Java/src/B4/Boj_17362_수학은_체육과목_입니다2.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_28701_세제곱의_합.java"]("BOJ/Java/src/B5/Boj_28701_세제곱의_합.java")
+
+-------------------------------------------------- -------
+Files added in commit:
+
+[Boj_1584_게임.java"]("BOJ/Java/src/G5/Boj_1584_게임.java")
+
