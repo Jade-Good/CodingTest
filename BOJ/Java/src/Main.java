@@ -1,4 +1,4 @@
-
+import S1.Boj_16568_엔비스카의_영혼;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,16 +6,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    static int problem_num = 17144; // <<<<<<<<<<<<< �����ϱ�
+    static int problem_num = 16568;
     static BufferedReader br;
     static StringBuilder sb;
     static String s;
 
     private static void doTest(String input, int count) throws IOException {
         long start = System.nanoTime();
-//        Boj_17144_�̼�����_�ȳ�.test(input); // <<<<<<<<<<<<<<<<<< �����ϱ�
+        Boj_16568_엔비스카의_영혼.test(input); // <<<<<<<<<<<<<<<<<< �����ϱ�
 
-        /* ���ø�
+        /* copy!!
 
         public static void test (String s) throws IOException {
             StringTokenizer st = new StringTokenizer(s);
@@ -29,10 +29,10 @@ public class Main {
          */
 
         long end = System.nanoTime();
-        int nano_seconds = (int) (end - start) / 1000;
+        int nano_seconds = (int) ((end - start) / 1000);
         int milli_seconds = nano_seconds / 1000;
         int seconds = milli_seconds / 1000;
-        System.out.printf("======\t (%d) %ds %dms %dns \t======\n", count, seconds, milli_seconds, nano_seconds);
+        System.out.printf("\n======\t (%d) %ds %dms %dns \t======\n", count, seconds, milli_seconds, nano_seconds);
     }
 
     private static void doInput() {
