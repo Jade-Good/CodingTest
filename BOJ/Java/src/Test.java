@@ -1,107 +1,99 @@
-import java.io.*;
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Test {
 
-    private static Game[] games;
-    private static ArrayList<Integer>[] adjList;
-    private static boolean[][] visited; // 이미 계산 됐는지 [선공, 후공]
+    private static int n;
+    private static int[] arr, result;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int N = Integer.parseInt(br.readLine());
+        n = Integer.parseInt(br.readLine());
+        arr = new int[(int) Math.pow(2, n)];
+        result = new int[n];
 
-        games = new Game[N + 1];
-        adjList = new ArrayList[N + 1];
-        visited = new boolean[N + 1][2];
-
-        for (int i = 1; i <= N; i++) {
-            games[i] = new Game(new int[]{0, 0}, new int[]{0, 0});
-            adjList[i] = new ArrayList<>();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int i = 1; i < N; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            int u = Integer.parseInt(st.nextToken());
-            int v = Integer.parseInt(st.nextToken());
+        Arrays.sort(arr);
+        result[0] = arr[1];
 
-            adjList[u].add(v);
-            adjList[v].add(u);
-        }
+        dfs(2, 1);
 
-        // 계산 진행
+        Arrays.sort(result);
         StringBuilder sb = new StringBuilder();
-
-        for (int i = 1; i <= N; i++) {
-            if (!visited[i][0]) {
-                dfs(i, 0);
-            }
-            sb.append(games[i].first[0] >= games[i].first[1] ? 1 : 0).append('\n');
+        for (int i : result) {
+            sb.append(i).append(' ');
         }
 
         bw.write(sb.toString());
         bw.flush();
     }
 
-    private static void dfs(int n, int seq) { // n 번째 트리부터 시작한 경우 탐색
-
-        if (seq == 0) { // 선공인 경우
-
-            if (adjList[n].size() < 2) { // 말단노드임
-                games[n].first[0] = n;
-                games[n].first[1] = 0;
-            } else {
-                int gap = Integer.MIN_VALUE;
-
-                for (int i : adjList[n]) { // n -> i 연결
-                    if (i < n)
-                        continue; // 부모 노드임
-                    if (!visited[i][1])
-                        dfs(i, 1); // 후공 정보 없어서 재귀
-                    if (gap < games[i].seconed[0] - games[i].seconed[1]) { // 더 크게 차이나게 이긴걸 최적으로 보기
-                        gap = games[i].seconed[0] - games[i].seconed[1];
-                        games[n].first[0] = n + games[i].seconed[0];
-                        games[n].first[1] = games[i].seconed[1];
-                    }
-                }
-            }
-
-        } else { // 후공인 경우
-
-            if (adjList[n].size() < 2) { // 말단노드임
-                games[n].seconed[0] = 0;
-                games[n].seconed[1] = n;
-            } else {
-                int gap = Integer.MIN_VALUE;
-
-                for (int i : adjList[n]) { // n -> i 연결
-                    if (i < n)
-                        continue; // 부모 노드임
-                    if (!visited[i][0])
-                        dfs(i, 0); // 선공 정보 없어서 재귀
-                    if (gap < games[i].first[1] - games[i].first[0]) { // 더 크게 차이나게 이긴걸 최적으로 보기
-                        gap = games[i].first[1] - games[i].first[0];
-                        games[n].seconed[0] = games[i].first[0];
-                        games[n].seconed[1] = n + games[i].first[1];
-                    }
-                }
-            }
-
+    private static boolean dfs(int idx, int pickCnt) {
+        if (idx == arr.length) {
+            return pickCnt == n;
         }
 
-        visited[n][seq] = true;
+        int need = findNeed(arr[idx], pickCnt);
+
+        if (need == 0) { // 현재 원소로 만들 수 있음
+            return dfs(idx + 1, pickCnt);
+        } else { // 새로 원소 추가 필요
+            if (pickCnt == n) {
+                return false;
+            }
+            result[pickCnt] = need;
+            return dfs(idx + 1, pickCnt + 1);
+        }
     }
 
-    private static class Game { // 현재 트리 위치에서 얻을 수 있는 최적 점수
-        int[] first; // 선공인 경우 [선공점수, 후공점수]
-        int[] seconed; // 후공인 경우 [선공점수, 후공점수]
-
-        Game(int[] f, int[] s) {
-            first = f;
-            seconed = s;
+    private static int findNeed(int target, int pickCnt) { // 0~pickCnt 로 target 만들 수 있는지 확인, 못만들면 필요한 원소중 가장 작은 값
+        int[] subset = new int[pickCnt];
+        System.arraycopy(result, 0, subset, 0, pickCnt);
+        int[] minNeeded = {Integer.MAX_VALUE};
+        if (findNeedRecursive(target, subset, 0, minNeeded) == 0) {
+            return 0;
+        } else {
+            return minNeeded[0];
         }
+    }
+
+    private static int findNeedRecursive(int target, int[] subset, int index, int[] minNeeded) {
+        if (index == subset.length) {
+            int sum = 0;
+            for (int num : subset) {
+                sum += num;
+            }
+            if (sum == target) {
+                return 0; // 현재 원소로 target을 만들 수 있음
+            }
+            // target을 만들 수 없는 경우, 필요한 가장 작은 원소 값 업데이트
+            int need = target - sum;
+            if (need < minNeeded[0]) {
+                minNeeded[0] = need;
+            }
+            return -1; // 만들 수 없음
+        }
+
+        for (int i = index; i < subset.length; i++) {
+            subset[index] = subset[i];
+            int result = findNeedRecursive(target, subset, index + 1, minNeeded);
+            if (result >= 0) {
+                return result;
+            }
+            subset[index] = 0;
+        }
+
+        return -1; // 만들 수 없음
     }
 }
