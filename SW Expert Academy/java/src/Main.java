@@ -1,5 +1,4 @@
 import D0.SWEA_5658_보물상자_비밀번호;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +9,7 @@ public class Main {
 //        String path = System.getProperty("user.dir");
 //        System.out.println("Working Directory = " + path);
 
-        int problem_num = 5658;
+        int problem_num = 1225;
         try {
             System.setIn(new FileInputStream("./SW Expert Academy/java/inputFiles/" + problem_num + ".txt"));
         } catch (IOException e) {
