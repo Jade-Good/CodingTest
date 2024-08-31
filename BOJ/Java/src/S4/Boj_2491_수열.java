@@ -19,10 +19,25 @@ public class Boj_2491_수열 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        int max = 2;
+        int inc_cnt = 1;
+        int dec_cnt = 1;
+        int max = 1;
 
-        int now = arr[0], next;
+        for (int i = 1; i < n; i++) {
+            if (arr[i] >= arr[i - 1]) {
+                inc_cnt++;
+            } else {
+                inc_cnt = 1;
+            }
+            if (arr[i] <= arr[i - 1]) {
+                dec_cnt++;
+            } else {
+                dec_cnt = 1;
+            }
+            max = Math.max(max, Math.max(inc_cnt, dec_cnt));
+        }
 
-
+        bw.write(Integer.toString(max));
+        bw.flush();
     }
 }
