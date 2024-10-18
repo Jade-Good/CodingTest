@@ -1,6 +1,6 @@
 package lv2._2018_KAKAO_BLIND_RECRUITMENT;
 
-public class _1차_프렌즈4블 {
+public class _1차_프렌즈4블록 {
     private char[][] map;
     private int R, C;
     private int[][] dir = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
