@@ -1,0 +1,25 @@
+package B4;
+
+import java.io.*;
+
+public class Boj_6888_Terms_of_Office {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
+        
+        int X = Integer.parseInt(br.readLine());
+        int Y = Integer.parseInt(br.readLine());
+        
+        sb.append("All positions change in year ").append(X).append('\n');
+
+        for (int i = X + 1; i <= Y; i++) {
+            if ((i - X) % 60 == 0) {
+                sb.append("All positions change in year ").append(i).append('\n');
+            }
+        }
+
+        bw.write(sb.toString());
+        bw.flush();
+    }
+}
