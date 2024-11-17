@@ -15,7 +15,7 @@ public class Boj_8674_Tabliczka {
         if (a % 2 == 0 || b % 2 == 0)
             bw.write("0");
         else
-            bw.write(Long.toString(Math.min(a, b)));
+            bw.write(Long.toString(Math.min(a,b)));
         bw.flush();
     }
 }
