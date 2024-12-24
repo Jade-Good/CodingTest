@@ -12,9 +12,11 @@ public class Boj_1946_신입사원 {
         StringBuilder sb = new StringBuilder();
 
         int T = Integer.parseInt(br.readLine());
+
         for (int t = 0; t < T; t++) {
+
             int N = Integer.parseInt(br.readLine());
-            int[][] arr = new int[N][3];
+            int[][] arr = new int[N][2];
 
             for (int i = 0; i < N; i++) {
                 StringTokenizer st = new StringTokenizer(br.readLine());
@@ -22,21 +24,15 @@ public class Boj_1946_신입사원 {
                 arr[i][1] = Integer.parseInt(st.nextToken());
             }
 
-            Arrays.sort(arr, Comparator.comparingInt(a -> -a[0]));
+            Arrays.sort(arr, Comparator.comparingInt(a -> a[0]));
+
+            int min = 100_001;
+            int cnt = 0;
 
             for (int i = 0; i < N; i++) {
-                arr[i][2] = i;
-            }
-
-            Arrays.sort(arr, Comparator.comparingInt(a -> -a[1]));
-
-            int cnt = N;
-            for (int i = 0; i < N; i++) {
-                for (int j = i + 1; j < N; j++) {
-                    if (arr[i][2] < arr[j][2]) {
-                        cnt--;
-                        break;
-                    }
+                if (arr[i][1] < min) {
+                    min = arr[i][1];
+                    cnt++;
                 }
             }
 
