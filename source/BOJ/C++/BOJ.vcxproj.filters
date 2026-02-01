@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="1003.cpp" />
+    <ClCompile Include="1010.cpp" />
+    <ClCompile Include="1021.cpp" />
+    <ClCompile Include="1085.cpp" />
+    <ClCompile Include="1145.cpp" />
+    <ClCompile Include="1152.cpp" />
+    <ClCompile Include="1236.cpp" />
+    <ClCompile Include="1259.cpp" />
+    <ClCompile Include="1316.cpp" />
+    <ClCompile Include="1680.cpp" />
+    <ClCompile Include="1712.cpp" />
+    <ClCompile Include="2480.cpp" />
+    <ClCompile Include="2557.cpp" />
+    <ClCompile Include="2750.cpp" />
+    <ClCompile Include="2839.cpp" />
+    <ClCompile Include="3003.cpp" />
+    <ClCompile Include="3041.cpp" />
+    <ClCompile Include="3046.cpp" />
+    <ClCompile Include="5554.cpp" />
+    <ClCompile Include="7287.cpp" />
+    <ClCompile Include="2753.cpp" />
+    <ClCompile Include="2884.cpp" />
+    <ClCompile Include="2525.cpp" />
+    <ClCompile Include="2741.cpp" />
+    <ClCompile Include="1110.cpp" />
+    <ClCompile Include="2798.cpp" />
+    <ClCompile Include="2309.cpp" />
+    <ClCompile Include="2609.cpp" />
+    <ClCompile Include="22351.cpp" />
+    <ClCompile Include="2204.cpp" />
+    <ClCompile Include="15596.cpp" />
+    <ClCompile Include="2442.cpp" />
+    <ClCompile Include="2446.cpp" />
+    <ClCompile Include="2752.cpp" />
+    <ClCompile Include="10870.cpp" />
+    <ClCompile Include="10872.cpp" />
+    <ClCompile Include="4153.cpp" />
+    <ClCompile Include="10250.cpp" />
+    <ClCompile Include="15829.cpp" />
+    <ClCompile Include="6378.cpp" />
+    <ClCompile Include="6996.cpp" />
+    <ClCompile Include="14489.cpp" />
+    <ClCompile Include="2231.cpp" />
+    <ClCompile Include="2292.cpp" />
+    <ClCompile Include="1181.cpp" />
+    <ClCompile Include="15351.cpp" />
+    <ClCompile Include="10820.cpp" />
+    <ClCompile Include="14891.cpp" />
+    <ClCompile Include="16234.cpp" />
+    <ClCompile Include="15684.cpp" />
+  </ItemGroup>
+</Project>
