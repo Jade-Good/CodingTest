@@ -3,35 +3,55 @@ name: Edit README based on Commit Message
 on:
   push:
     branches:
-      - main
+      - main  # 브랜치명이 master라면 master로 변경해주세요
 
 jobs:
   edit_readme:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Extract Commit Message
         id: extract_commit_message
-        run: echo "::set-output name=message::$(git log --format=%B -n 1 ${{ github.sha }})"
+        run: |
+          MSG=$(git log --format=%B -n 1 ${{ github.sha }})
+          echo "message=$MSG" >> $GITHUB_OUTPUT
 
-      - name: Parse Commit Message
+      - name: Parse Commit Message and Check Condition
         id: parse_commit_message
-        run: echo "::set-output name=ct_number::$(echo ${{ steps.extract_commit_message.outputs.message }} | grep -oP 'CT_\K\d+')"
+        run: |
+          MESSAGE="${{ steps.extract_commit_message.outputs.message }}"
+          
+          # 1. 백준허브 커밋인지 확인 (포함되어 있으면 스킵)
+          if [[ "$MESSAGE" == *"BaekjoonHub"* ]]; then
+            echo "Detected BaekjoonHub commit. Skipping."
+            echo "ct_number=" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # 2. CT_ 숫자 추출 (예: CT_130 -> 130 추출)
+          CT_NUM=$(echo "$MESSAGE" | grep -oP 'CT_\K\d+' || true)
+          
+          echo "Extracted CT Number: $CT_NUM"
+          echo "ct_number=$CT_NUM" >> $GITHUB_OUTPUT
 
       - name: Edit README
         run: |
           ct_number="${{ steps.parse_commit_message.outputs.ct_number }}"
+          
           if [ -n "$ct_number" ]; then
+            # README 첫 줄을 '# :rocket: 스트릭 [숫자] 일' 로 교체
             sed -i "1s/.*/# :rocket: 스트릭 [${ct_number}] 일/" README.md
+          
+            # 변경 사항 커밋 및 푸시
+            git config user.name 'GitHub Actions'
+            git config user.email 'actions@github.com'
+            git add README.md
+            git commit -m "Update README based on commit message [skip ci]"
+            git push
+          else
+            echo "No CT number found or BaekjoonHub commit. No changes made."
           fi
-
-      - name: Commit Changes
-        run: |
-          git config user.name 'GitHub Actions'
-          git config user.email '<>'
-          git add README.md
-          git commit -m "Update README based on commit message"
-          git push
