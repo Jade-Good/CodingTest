@@ -26,5 +26,6 @@ public class Boj_31833_온데간데없을뿐더러 {
 
         bw.write(String.valueOf(result));
         bw.flush();
+
     }
 }
